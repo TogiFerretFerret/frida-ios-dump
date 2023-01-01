@@ -7,5 +7,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: pip install frida-tools && sudo pip install -r requirements.txt --upgrade && sudo apt-get install libusbmuxd-tools && iproxy 2222 22
+      - run: pip install frida-tools
+      - run: sudo pip install -r requirements.txt --upgrade
       - run: ./dump.py com.opera.gx
